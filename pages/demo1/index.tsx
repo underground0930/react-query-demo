@@ -12,7 +12,7 @@ const options = {};
 export default function Home() {
   return (
     <div className={styles.container}>
-      <h1>demo1</h1>
+      <h3>demo1</h3>
       <DemoWrapper>
         <Demo options={options} />
       </DemoWrapper>

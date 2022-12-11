@@ -10,6 +10,7 @@ function Demo({ options }: Props) {
   const queryClient = useQueryClient();
   const { data, isLoading, isFetching } = useQuery<{ name: string }>({
     ...options,
+    refetchOnWindowFocus: false,
     queryKey: ["hello"],
     queryFn: () => client("/api/hello"),
   });

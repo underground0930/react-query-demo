@@ -8,14 +8,14 @@ import DemoWrapper from "../../components/DemoWrapper";
 import Demo from "../../components/Demo";
 
 const options = {
-  cacheTime: 1000 * 5,
-  staleTime: 1000 * 5,
+  cacheTime: 1000 * 20,
+  staleTime: 1000 * 8,
 };
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <h1>demo2</h1>
+      <h3>demo2</h3>
       <DemoWrapper>
         <Demo options={options} />
       </DemoWrapper>
