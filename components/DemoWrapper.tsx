@@ -11,7 +11,9 @@ function DemoWrapper({ children }: Props) {
   return (
     <div>
       <div>
-        <button onClick={() => setIsShowDemo((prev) => !prev)}>show toggle</button>
+        <button onClick={() => setIsShowDemo((prev) => !prev)}>
+          {isShowDemo ? "hide" : "show"} toggle
+        </button>
       </div>
       {isShowDemo && children}
     </div>
