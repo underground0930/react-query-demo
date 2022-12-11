@@ -25,8 +25,7 @@ function Demo({ options }: Props) {
         <p>
           isLoading :　
           <span style={{ color: "red" }}>{isLoading ? "isLoading" : ""}</span>
-        </p>
-        <p>
+          <br />
           isFetching :　
           <span style={{ color: "green" }}>{isFetching ? "isFetching" : ""}</span>
         </p>
@@ -36,9 +35,7 @@ function Demo({ options }: Props) {
         <p>
           <button onClick={() => queryClient.invalidateQueries({ queryKey: ["hello"] })}>
             invalidateQueries
-          </button>
-        </p>
-        <p>
+          </button>{" "}
           <button onClick={() => queryClient.resetQueries({ queryKey: ["hello"] })}>
             resetQueries
           </button>

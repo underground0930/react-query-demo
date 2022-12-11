@@ -5,42 +5,18 @@ type Data = {
   name: string;
 };
 
-const alpabet = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
+const c = "a".charCodeAt(0);
+const alphabets = [...new Array(26)].map((v, i) => {
+  return String.fromCharCode(c + i).toUpperCase();
+});
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   await new Promise((resolve) => {
     setTimeout(() => {
       resolve("ok");
-    }, 1000);
+    }, 5000);
   });
   res.status(200).json({
-    name: "John Doe 「" + alpabet[Math.floor(Math.random() * alpabet.length)] + "」",
+    name: "「" + alphabets[Math.floor(Math.random() * alphabets.length)] + "」",
   });
 }
