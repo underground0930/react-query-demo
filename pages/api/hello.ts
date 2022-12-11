@@ -9,7 +9,7 @@ const c = "a".charCodeAt(0);
 const alphabets = [...new Array(26)].map((v, i) => {
   return String.fromCharCode(c + i).toUpperCase();
 });
-const delay = 10000;
+const delay = 5000;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   await new Promise((resolve) => setTimeout(() => resolve("ok"), delay));
