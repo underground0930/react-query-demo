@@ -12,11 +12,7 @@ const alphabets = [...new Array(26)].map((v, i) => {
 const delay = 10000;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
-  await new Promise((resolve) => {
-    setTimeout(() => {
-      resolve("ok");
-    }, delay);
-  });
+  await new Promise((resolve) => setTimeout(() => resolve("ok"), delay));
   res.status(200).json({
     name: "「" + alphabets[Math.floor(Math.random() * alphabets.length)] + "」",
   });
