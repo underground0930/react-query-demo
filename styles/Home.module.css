@@ -1,0 +1,8 @@
+.container {
+  padding: 0 2rem;
+  font-size: 20px;
+}
+
+.container li {
+  margin-bottom: 10px;
+}
